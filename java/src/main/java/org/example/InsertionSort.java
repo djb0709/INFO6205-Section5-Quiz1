@@ -14,11 +14,13 @@ public class InsertionSort {
         Comparable x = a[i];
         int j = i - 1;
 
-        while(a[j].compareTo(x) > 0 && j >= 0) {
+        while(j >= 0 && a[j].compareTo(x) > 0 ) {
+            a[j + 1] = a[j];
+            j--;
 
-            a[j + 1] = x;
         }
-        a[j + 1] = x;
+        a[j+1] = x;
+
     }
 
     private void swap(Object[] a, int i, int j) {
