@@ -14,8 +14,8 @@ public class InsertionSort {
         Comparable x = a[i];
         int j = i - 1;
 
-        if (a[j].compareTo(x) > 0) {
-            a[i] = a[i];
+        while(a[j].compareTo(x) > 0 && j >= 0) {
+
             a[j + 1] = x;
         }
         a[j + 1] = x;
